@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="FormsAuthenticateProject.Administration.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Administration</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="text-align:center;">
+            <img src="../Images/Administration.png" alt="Admin" />
+            <br />
+
+            <div style="text-align:right;">
+                <asp:Label ID="lblName" runat="server" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="lnkSignOut" runat="server" OnClick="lnkSignOut_Click">Sign Out</asp:LinkButton>
+            </div>
+
+            <br />
+
+<asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Administration/default.aspx">Home</asp:HyperLink>
+            &nbsp;&nbsp;
+            <asp:HyperLink ID="lnkProducts" runat="server" NavigateUrl="~/Administration/ProductManagement.aspx">Manage Products</asp:HyperLink>
+            &nbsp;&nbsp;
+            <asp:HyperLink ID="lnkUserMaintenance" runat="server" NavigateUrl="~/Administration/UserMaintenance.aspx">Manage Users</asp:HyperLink>
+            &nbsp;&nbsp;
+            <asp:HyperLink ID="lnkReporting" runat="server" NavigateUrl="~/Administration/Reporting.aspx">Reporting</asp:HyperLink>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

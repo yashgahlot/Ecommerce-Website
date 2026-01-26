@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.master.cs" Inherits="FormsAuthenticateProject.Customer.Customer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="text-align:center;">
+        <img src="../Images/Customer.png" alt="customer" />
+         <br />
+          <div style="text-align:right;">
+                <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <asp:HyperLink ID="hlSignOut" runat="server"
+    NavigateUrl="~/Account/Logout.aspx">Sign Out</asp:HyperLink>
+            </div>
+            <br />
+  <asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Customer/default.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;
+<asp:HyperLink ID="lnkChangePassword" runat="server" NavigateUrl="~/Customer/ChangePassword.aspx">Change Password</asp:HyperLink>
+&nbsp;&nbsp;
+<asp:HyperLink ID="lnkOrderProduct" runat="server" NavigateUrl="~/Customer/OrderProduct.aspx">Order Products</asp:HyperLink>
+&nbsp;&nbsp;
+<asp:HyperLink ID="lnkViewHistory" runat="server" NavigateUrl="~/Customer/ViewHistory.aspx">View History</asp:HyperLink>
+&nbsp;&nbsp;
+<asp:HyperLink ID="lnkTrackOrders" runat="server" NavigateUrl="~/Customer/TrackOrders.aspx">Track Orders</asp:HyperLink>
+
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
